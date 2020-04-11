@@ -47,7 +47,7 @@ public class LoginPage {
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
         BrowserUtilities.waitForPageToLoad(10);
-        BrowserUtilities.wait(3);
+        BrowserUtilities.wait(4);
     }
 
     /**
@@ -59,6 +59,6 @@ public class LoginPage {
         username.sendKeys(ConfigurationReader.getProperty("store_manager"));
         password.sendKeys(ConfigurationReader.getProperty("password"), Keys.ENTER);
         BrowserUtilities.waitForPageToLoad(10);
-        BrowserUtilities.wait(3);
+        BrowserUtilities.wait(4);
     }
 }
