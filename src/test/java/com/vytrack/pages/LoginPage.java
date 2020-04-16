@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
+
     @FindBy(id = "prependedInput")
     private WebElement username;
 //    public WebElement username2 = Driver.getDriver().findElement(By.id("prependedInput"));
@@ -47,7 +48,7 @@ public class LoginPage {
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
         BrowserUtilities.waitForPageToLoad(10);
-        BrowserUtilities.wait(4);
+        BrowserUtilities.wait(3);
     }
 
     /**
@@ -59,6 +60,6 @@ public class LoginPage {
         username.sendKeys(ConfigurationReader.getProperty("store_manager"));
         password.sendKeys(ConfigurationReader.getProperty("password"), Keys.ENTER);
         BrowserUtilities.waitForPageToLoad(10);
-        BrowserUtilities.wait(4);
+        BrowserUtilities.wait(3);
     }
 }
