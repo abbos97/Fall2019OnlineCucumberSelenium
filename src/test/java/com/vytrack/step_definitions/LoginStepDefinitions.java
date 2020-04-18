@@ -10,7 +10,6 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class LoginStepDefinitions {
-
     LoginPage loginPage = new LoginPage();
 
     @Given("user is on the login page")
@@ -38,7 +37,6 @@ public class LoginStepDefinitions {
         BrowserUtilities.waitForPageToLoad(10);
         BrowserUtilities.wait(2);
         Assert.assertEquals("Dashboard", Driver.getDriver().getTitle());
-        Driver.closeDriver();
     }
 
     @When("user logs in as a driver")
