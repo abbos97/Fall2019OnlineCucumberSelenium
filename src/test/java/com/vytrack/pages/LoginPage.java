@@ -11,7 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage extends AbstractPageBase{
     @FindBy(id = "prependedInput")
     private WebElement username;
-//    public WebElement username2 = Driver.getDriver().findElement(By.id("prependedInput"));
 
     @FindBy(id = "prependedInput2")
     private WebElement password;
@@ -54,6 +53,7 @@ public class LoginPage extends AbstractPageBase{
         BrowserUtilities.waitForPageToLoad(10);
         BrowserUtilities.wait(3);
     }
+
     /**
      * this method stands for login based on user type
      * For example: if parameter is equals to driver, user will login as a driver
