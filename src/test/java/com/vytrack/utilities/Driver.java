@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
-
     //same for everyone
     private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
 
@@ -68,14 +67,14 @@ public class Driver {
             //specify browser type in configuration.properties file
             switch (browser) {
                 case "chrome":
-                    WebDriverManager.chromedriver().version("81").setup();
+                    WebDriverManager.chromedriver().version("79").setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--start-maximized");
                     driverPool.set(new ChromeDriver(chromeOptions));
                     break;
                 case "chromeheadless":
                     //to run chrome without interface (headless mode)
-                    WebDriverManager.chromedriver().version("81").setup();
+                    WebDriverManager.chromedriver().version("79").setup();
                     ChromeOptions options = new ChromeOptions();
                     options.setHeadless(true);
                     driverPool.set(new ChromeDriver(options));

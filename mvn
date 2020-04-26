@@ -1,0 +1,178 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------< com.vytrack:Fall2019OnlineCucumberSelenium >-------------
+[INFO] Building Fall2019OnlineCucumberSelenium 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Fall2019OnlineCucumberSelenium ---
+[INFO] Deleting C:\Users\abbos\IdeaProjects\Fall2019OnlineCucumberSelenium1\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Fall2019OnlineCucumberSelenium ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\abbos\IdeaProjects\Fall2019OnlineCucumberSelenium1\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ Fall2019OnlineCucumberSelenium ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Fall2019OnlineCucumberSelenium ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ Fall2019OnlineCucumberSelenium ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to C:\Users\abbos\IdeaProjects\Fall2019OnlineCucumberSelenium1\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M4:test (default-test) @ Fall2019OnlineCucumberSelenium ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+Apr 25, 2020 1:27:56 PM io.cucumber.junit.Cucumber <init>
+WARNING: By default Cucumber is running in --non-strict mode.
+This default will change to --strict and --non-strict will be removed.
+You can use --strict or @CucumberOptions(strict = true) to suppress this warning
+
+
+
+Failed scenarios:
+
+
+file:///C:/Users/abbos/IdeaProjects/Fall2019OnlineCucumberSelenium1/src/test/resources/features/fleet/CreateCar.feature:4
+# Add new car
+
+
+file:///C:/Users/abbos/IdeaProjects/Fall2019OnlineCucumberSelenium1/src/test/resources/features/fleet/CreateCar.feature:33
+# Add new car for driver test_driver
+
+
+
+
+4
+ Scenarios (
+2 failed
+, 
+2 passed
+)
+
+
+24
+ Steps (
+2 failed
+, 
+22 passed
+)
+
+
+2m
+12.558s
+
+
+
+
+
+
+org.junit.ComparisonFailure: expected:<SDET[]> but was:<SDET[ro Racer]>
+
+
+	at org.junit.Assert.assertEquals(Assert.java:117)
+
+
+	at org.junit.Assert.assertEquals(Assert.java:146)
+
+
+	at com.vytrack.step_definitions.CreateCarStepDefinitons.user_verifies_that_car_info_is_displayed(CreateCarStepDefinitons.java:43)
+
+
+	at ?.user verifies that car info is displayed:(file:///C:/Users/abbos/IdeaProjects/Fall2019OnlineCucumberSelenium1/src/test/resources/features/fleet/CreateCar.feature:12)
+
+
+
+
+org.junit.ComparisonFailure: expected:<123[]> but was:<123[_driver]>
+
+
+	at org.junit.Assert.assertEquals(Assert.java:117)
+
+
+	at org.junit.Assert.assertEquals(Assert.java:146)
+
+
+	at com.vytrack.step_definitions.CreateCarStepDefinitons.user_verifies_that_car_info_is_displayed(CreateCarStepDefinitons.java:43)
+
+
+	at ?.user verifies that car info is displayed:(file:///C:/Users/abbos/IdeaProjects/Fall2019OnlineCucumberSelenium1/src/test/resources/features/fleet/CreateCar.feature:26)
+
+
+
+
+
+
+[INFO] Running Create a car
+Test setup
+Open login page
+Login as sales manager
+User clicks on the Fleet tab and navigates to Vehicles module
+User click on create a car button
+[{License Plate=SDET, Driver=Pro Racer, Location=London, Model Year=2020, Color=Red}]
+Test clean up
+Test setup
+Open login page
+Login as sales manager
+User clicks on the Fleet tab and navigates to Vehicles module
+User click on create a car button
+[{License Plate=000, Driver=pilot, Location=Washington D.C., Model Year=2010, Color=purple}]
+Test clean up
+Test setup
+Open login page
+Login as sales manager
+User clicks on the Fleet tab and navigates to Vehicles module
+User click on create a car button
+[{License Plate=123, Driver=test_driver, Location=New York, Model Year=2022, Color=black}]
+Test clean up
+Test setup
+Open login page
+Login as sales manager
+User clicks on the Fleet tab and navigates to Vehicles module
+User click on create a car button
+[{License Plate=9122, Driver=pro_driver, Location=Portland, Model Year=2008, Color=brown}]
+Test clean up
+[ERROR] Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 132.55 s <<< FAILURE! - in Create a car
+[ERROR] Create a car.Add new car  Time elapsed: 40.202 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<SDET[]> but was:<SDET[ro Racer]>
+
+[ERROR] Create a car.Add new car for driver test_driver  Time elapsed: 31.372 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<123[]> but was:<123[_driver]>
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   expected:<SDET[]> but was:<SDET[ro Racer]>
+[ERROR]   expected:<123[]> but was:<123[_driver]>
+[INFO] 
+[ERROR] Tests run: 4, Failures: 2, Errors: 0, Skipped: 0
+[INFO] 
+[ERROR] There are test failures.
+
+Please refer to C:\Users\abbos\IdeaProjects\Fall2019OnlineCucumberSelenium1\target\surefire-reports for the individual test results.
+Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ Fall2019OnlineCucumberSelenium ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: C:\Users\abbos\IdeaProjects\Fall2019OnlineCucumberSelenium1\target\Fall2019OnlineCucumberSelenium-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-cucumber-reporting:5.0.0:generate (execution) @ Fall2019OnlineCucumberSelenium ---
+[INFO] About to generate Cucumber report.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:21 min
+[INFO] Finished at: 2020-04-25T13:30:12-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal net.masterthought:maven-cucumber-reporting:5.0.0:generate (execution) on project Fall2019OnlineCucumberSelenium: Error Found:: BUILD FAILED - Check Report For Details -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
