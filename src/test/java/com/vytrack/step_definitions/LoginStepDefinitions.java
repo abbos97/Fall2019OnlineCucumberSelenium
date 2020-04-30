@@ -15,7 +15,13 @@ public class LoginStepDefinitions {
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
         System.out.println("Open login page");
-        String URL = ConfigurationReader.getProperty("qa3");
+        // -Denv=qa1, -Denv=qa2, -Denv=qa3
+        String env = "qa2";
+        if (System.getProperty("env") != null) {
+            env = System.getProperty("env");
+        }
+        String URL = ConfigurationReader.getProperty(env);
+        System.out.println("URL :: " + URL);
         Driver.getDriver().get(URL);
     }
 
@@ -65,8 +71,8 @@ public class LoginStepDefinitions {
 
 
     @When("user logs in as {string}")
-    public void user_logs_in_as(String string) {
-        loginPage.login(string);
+    public void user_logs_in_as(String userType) {
+        loginPage.login(userType);
     }
 
     @Then("user verifies that page title is {string}")

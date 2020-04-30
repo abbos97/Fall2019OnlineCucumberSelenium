@@ -39,6 +39,7 @@ public class CalendarEventsPage  extends AbstractPageBase {
     private WebElement descriptionTextArea;
 
 
+
     @FindBy(xpath = "(//div[@class='control-label'])[1]")
     private WebElement generalInfoTitle;
 
@@ -58,6 +59,7 @@ public class CalendarEventsPage  extends AbstractPageBase {
         BrowserUtilities.wait(2);
         return BrowserUtilities.getTextFromWebElements(viewPerPageElements);
     }
+
     public void enterCalendarEventTitle(String titleValue) {
         BrowserUtilities.waitForPageToLoad(20);
         wait.until(ExpectedConditions.visibilityOf(title)).sendKeys(titleValue);
@@ -71,8 +73,6 @@ public class CalendarEventsPage  extends AbstractPageBase {
         wait.until(ExpectedConditions.textToBePresentInElement(descriptionTextArea, description));
         driver.switchTo().defaultContent();//exit from the frame
     }
-
-
 
     public String getGeneralInfoTitleText() {
         BrowserUtilities.waitForPageToLoad(20);

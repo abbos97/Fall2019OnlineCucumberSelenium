@@ -1,4 +1,4 @@
-@Login
+@login
 Feature: Login
  As user, I want to be able to login with username and password
 #  Agile story
@@ -33,6 +33,7 @@ Feature: Login
  Scenario Outline: User names test for user <name>
   When user enters "<username>" username and "<password>" password
   Then user name should be "<name>"
+
   Examples: credentials
    | username        | password    | name             |
    | user187         | UserUser123 | Jerel Vandervort |

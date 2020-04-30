@@ -73,5 +73,6 @@ public class LoginPage extends AbstractPageBase{
         }
         System.out.println("Login as "+role);
         login(userName, "UserUser123");
+
     }
 }
